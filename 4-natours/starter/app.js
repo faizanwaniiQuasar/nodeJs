@@ -20,6 +20,7 @@ const express = require('express');
 const fs = require('fs');
 
 const app = express();
+
 app.use(express.json()); /// middle ware
 const port = 8000;
 const tours = JSON.parse(
@@ -40,6 +41,8 @@ app.post('/api/v1/rest', (req, res) => {
   res.send('Done');
 });
 
-app.listen(port, () => {
-  console.log(`Listening to port no. ${port}...`);
-});
+// app.listen(port, () => {
+//   console.log(`Listening to port no. ${port}...`);
+// });
+
+module.exports = app;
